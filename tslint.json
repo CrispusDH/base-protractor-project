@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules"
+  ],
+  "jsRules": {},
+  "rulesDirectory": ["node_modules/tslint-eslint-rules/dist/rules"],
+  "rules": {
+    "ter-indent": [true, 2, { "SwitchCase": 1 }],
+    "quotemark": [true, "single"],
+    "trailing-comma":  [false]
+  }
+}
