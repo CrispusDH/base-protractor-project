@@ -21,7 +21,6 @@
     "typescript": "^2.7.1"
   },
   "scripts": {
-    "clean": "rm -rf dist reports",
     "pretest": "npm run build",
     "test": "protractor ./dist/config/protractor.dev.conf.js",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
