@@ -22,6 +22,7 @@
   },
   "scripts": {
     "pretest": "npm run build",
+    "clean": "rm -rf dist",
     "test": "protractor ./dist/config/protractor.dev.conf.js",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "npm run clean",
