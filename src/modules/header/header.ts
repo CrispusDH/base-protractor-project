@@ -1,5 +1,5 @@
 import { $ } from 'protractor';
-import { Search } from 'src/modules/header/entities/search';
+import { Search } from '@src/modules/header/entities/search';
 
 export class Header {
   public readonly search: Search;
