@@ -1,4 +1,5 @@
 export { Constants } from './constants';
+export { Page } from './page';
 
 export {
   fragmentTextOverload,

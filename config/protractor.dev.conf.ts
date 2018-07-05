@@ -17,6 +17,7 @@ export let config: Config = {
   },
   onPrepare: async () => {
     await browser.waitForAngularEnabled(false );
+    await browser.manage().window().maximize();
 
     jasmine.getEnv().addReporter(DescribeFailureReporter(jasmine.getEnv() ) );
     jasmine.getEnv().addReporter(new SpecReporter() );
