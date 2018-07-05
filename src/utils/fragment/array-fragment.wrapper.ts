@@ -32,13 +32,13 @@ export class ArrayFragment<T extends Fragment> extends BaseArrayFragment<T> {
    * @returns {Array<Fragment>} Returns a promise, which resolves
    * to a list of Fragments.
    */
-  public async asFragments(): Promise<T[]> {
-    const fragments: T[] = [];
+  public async asFragments(): Promise<Array<T>> {
+    const fragments: Array<T> = [];
     await this.each((fragment) => fragments.push(fragment));
     return fragments;
   }
 
-  public map(mapFn: (elementFinder?: T, index?: number) => any): wdpromise.Promise<any[]> {
+  public map(mapFn: (elementFinder?: T, index?: number) => any): wdpromise.Promise<Array<any>> {
     return super.map(this.makeFnSequential(mapFn));
   }
 

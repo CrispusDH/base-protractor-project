@@ -115,8 +115,8 @@ export class Predicates {
   }
 
   public static isArrayIncludesSubArray(
-    getSourceArray: Supplier<string[]>,
-    subArray: string[]
+    getSourceArray: Supplier<Array<string>>,
+    subArray: Array<string>
   ): Supplier<boolean> {
     return async (): Promise<boolean> => {
       const sourceArray = await getSourceArray();
@@ -125,8 +125,8 @@ export class Predicates {
   }
 
   public static isArrayNotIncludesSubArray(
-    getSourceArray: Supplier<string[]>,
-    subArray: string[]
+    getSourceArray: Supplier<Array<string>>,
+    subArray: Array<string>
   ): Supplier<boolean> {
     return async (): Promise<boolean> => {
       const sourceArray = await getSourceArray();

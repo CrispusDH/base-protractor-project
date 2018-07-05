@@ -84,8 +84,8 @@ export class Verify {
   }
 
   public static async arrayIncludesSubArray(
-    getSourceArray: Supplier<string[]>,
-    subArray: string[]
+    getSourceArray: Supplier<Array<string>>,
+    subArray: Array<string>
   ): Promise<void> {
     await waitFor(
       Predicates.isArrayIncludesSubArray(getSourceArray, subArray),
@@ -94,8 +94,8 @@ export class Verify {
   }
 
   public static async arrayDoesNotIncludeSubArray(
-    getSourceArray: Supplier<string[]>,
-    subArray: string[]
+    getSourceArray: Supplier<Array<string>>,
+    subArray: Array<string>
   ): Promise<void> {
     await waitFor(
       Predicates.isArrayNotIncludesSubArray(getSourceArray, subArray),
