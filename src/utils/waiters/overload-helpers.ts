@@ -1,4 +1,4 @@
-import { Fragment } from '@src/utils';
+import { Fragment } from '@src/utils/fragment/fragment.wrapper';
 
 export type Supplier<T> = () => Promise<T>;
 export type StringSupplier = string | Supplier<string>;

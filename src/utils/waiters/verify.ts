@@ -1,4 +1,6 @@
-import { BooleanSupplier, NumberSupplier, Predicates, StringSupplier, Supplier, waitFor } from '@src/utils';
+import { BooleanSupplier, NumberSupplier, StringSupplier, Supplier } from '@src/utils/waiters/overload-helpers';
+import { Predicates } from '@src/utils/waiters/predicates';
+import { waitFor } from '@src/utils/waiters/wait-for.wrapper';
 
 export class Verify {
   public static async toBeTruthy(getBoolean: BooleanSupplier): Promise<void> {

@@ -1,6 +1,6 @@
-import { Fragment } from '@src/utils';
 import { BaseArrayFragment } from 'protractor-element-extend';
 import { promise as wdpromise } from 'selenium-webdriver';
+import { Fragment } from '@src/utils/fragment/fragment.wrapper';
 
 export class ArrayFragment<T extends Fragment> extends BaseArrayFragment<T> {
   public filter(
@@ -18,8 +18,12 @@ export class ArrayFragment<T extends Fragment> extends BaseArrayFragment<T> {
     }
     for (let i = 0; i < count; i++) {
       const fragment = await this.get(i);
-      if (await filterFn(fragment, i)) {
-        return fragment;
+      try {
+        if (await filterFn(fragment, i)) {
+          return fragment;
+        }
+      } catch (e) {
+        throw new Error(`Hello my friend, you get an error in filter function: "${e}"`);
       }
     }
     throw new Error('Find function did not match any fragment');

@@ -1,6 +1,7 @@
-import { Verify, WaitConditions } from '@src/utils';
 import { protractor } from 'protractor';
 import { BaseFragment } from 'protractor-element-extend';
+import { WaitConditions } from '@src/utils/waiters/wait-conditions';
+import { Verify } from '@src/utils/waiters/verify';
 
 export class Fragment extends BaseFragment {
 
@@ -55,8 +56,12 @@ export class Fragment extends BaseFragment {
     } catch (e) {
       throw new Error(`Can not get attribute ${name} of not visible fragment. ${e}`);
     }
+    const attribute = await this.getAttribute(name);
+    if (attribute === null) {
+      throw new Error(`Watch out, fragment does not have ${name} attribute!`);
+    }
 
-    return await this.getAttribute(name);
+    return attribute;
   }
 
   public async waitForVisible(): Promise<void> {

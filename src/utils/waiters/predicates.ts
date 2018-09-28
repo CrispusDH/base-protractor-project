@@ -1,14 +1,14 @@
+import { ArrayFragment } from '@src/utils/fragment/array-fragment.wrapper';
+import { Fragment } from '@src/utils/fragment/fragment.wrapper';
 import {
-  ArrayFragment,
   booleanOverload,
   BooleanSupplier,
-  Fragment,
   numberOverload,
   NumberSupplier,
   stringOverload,
   StringSupplier,
   Supplier
-} from '@src/utils';
+} from '@src/utils/waiters/overload-helpers';
 
 export class Predicates {
   public static isArrayNotEmpty(array: ArrayFragment<Fragment>): Supplier<boolean> {
