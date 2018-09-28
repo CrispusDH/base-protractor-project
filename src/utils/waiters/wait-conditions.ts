@@ -1,5 +1,8 @@
-import { ArrayFragment, Fragment, Predicates, waitFor } from '@src/utils';
 import { ElementFinder, ExpectedConditions as EC } from 'protractor';
+import { waitFor } from '@src/utils/waiters/wait-for.wrapper';
+import { ArrayFragment } from '@src/utils/fragment/array-fragment.wrapper';
+import { Fragment } from '@src/utils/fragment/fragment.wrapper';
+import { Predicates } from '@src/utils/waiters/predicates';
 
 export class WaitConditions {
   public static async clickable(element: ElementFinder): Promise<void> {
