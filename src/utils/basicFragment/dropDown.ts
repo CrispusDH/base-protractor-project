@@ -1,7 +1,5 @@
+import { ArrayFragment, Fragment, WaitConditions } from 'oi-protractor-typescript-initial';
 import { ElementFinder } from 'protractor';
-import { Fragment } from '@src/utils/fragment/fragment.wrapper';
-import { ArrayFragment } from '@src/utils/fragment/array-fragment.wrapper';
-import { WaitConditions } from '@src/utils/waiters/wait-conditions';
 
 export class DropDown extends Fragment {
   private readonly options: ArrayFragment<Fragment>;

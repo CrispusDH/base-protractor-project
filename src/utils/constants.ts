@@ -1,11 +1,3 @@
-export const Constants = {
-  waitPreset: {
-    jasmine: {
-      defaultTimeoutInterval: 60 * 1000
-    },
-    waitCondition:
-    {
-      defaultTimeout: 10 * 1000
-    }
-  }
-};
+export const baseURI = (process.env.API_ENV === 'prod')
+  ? 'https://some url'
+  : `https://${process.env.API_ENV}.some url`;

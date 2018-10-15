@@ -1,5 +1,5 @@
-import { Page } from '@src/utils';
-import { Header } from '@src/modules';
+import { Page } from '@src/utils/page';
+import { Header } from '@src/modules/header/header';
 
 export class Main extends Page {
   public readonly header: Header;

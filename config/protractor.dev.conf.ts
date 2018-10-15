@@ -16,15 +16,15 @@ export let config: Config = {
     maxInstances: 1
   },
   onPrepare: async () => {
-    await browser.waitForAngularEnabled(false );
-    await browser.manage().window().maximize();
+    await browser.waitForAngularEnabled(false);
 
-    jasmine.getEnv().addReporter(DescribeFailureReporter(jasmine.getEnv() ) );
-    jasmine.getEnv().addReporter(new SpecReporter() );
+    jasmine.getEnv().addReporter(DescribeFailureReporter(jasmine.getEnv()));
+    jasmine.getEnv().addReporter(new SpecReporter());
+    await browser.manage().window().maximize();
   },
 
   SELENIUM_PROMISE_MANAGER: false,
   specs: [
-    '../test/*.js'
+    '../test/**/*.js'
   ]
 };

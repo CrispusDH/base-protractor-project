@@ -1,5 +1,5 @@
 import { $, ElementFinder } from 'protractor';
-import { Fragment } from '@src/utils';
+import { Fragment } from 'oi-protractor-typescript-initial';
 
 export class Search extends Fragment {
   public readonly searchInput: Fragment;
